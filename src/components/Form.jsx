@@ -1,34 +1,34 @@
 export default function Form() {
   return (
-    <div className="bg-none w-[750px] flex mx-auto px-16 py-14 justify-center items-center flex-col">
+    <div className="flex flex-col items-center justify-center w-auto px-12 py-12 mx-auto bg-none">
       <input 
-        className="border p-2 rounded-lg mb-3 w-full border-black placeholder-slate-500 placeholder:font-bold" 
+        className="w-full p-2 mb-3 placeholder-gray-500 border border-black rounded placeholder:font-semibold" 
         type="text" 
         placeholder="Name" 
       />
-      <div className="flex gap-3 w-full">
+      <div className="flex flex-col w-full gap-3 lg:flex-row">
         <input 
-          className="border p-2 rounded-lg mb-3 w-full border-black placeholder-slate-500 placeholder:font-bold" 
+          className="w-full p-2 placeholder-gray-500 border border-black rounded placeholder:font-semibold lg:mb-3" 
           type="email" 
           placeholder="Email" 
         />
         <input 
-          className="border p-2 rounded-lg mb-3 w-full border-black placeholder-slate-500 placeholder:font-bold" 
+          className="w-full p-2 mb-3 placeholder-gray-500 border border-black rounded placeholder:font-semibold" 
           type="password" 
           placeholder="Phone" 
         />
       </div>
       <input 
-        className="border p-2 rounded-lg mb-3 w-full border-black placeholder-slate-500 placeholder:font-bold" 
+        className="w-full p-2 mb-3 placeholder-gray-500 border border-black rounded placeholder:font-semibold" 
         type="text" 
         placeholder="Subject" 
       />
       <textarea 
-        className="border p-2 rounded-lg mb-3 w-full border-black placeholder-slate-500 placeholder:font-bold h-[100px]" 
+        className="border p-2 rounded mb-3 w-full border-black placeholder-gray-5 placeholder:font-semibold h-[100px00]" 
         placeholder="How can we help?"
       ></textarea>
       <button 
-        className="bg-rose-500 font-bold uppercase text-white p-4 rounded-lg w-full"
+        className="w-full p-4 font-semibold text-white uppercase rounded bg-rose-500"
       >
         Submit
       </button>

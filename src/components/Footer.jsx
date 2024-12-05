@@ -1,8 +1,6 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function Footer() {
-  
-
   const brands = [
     { name: "Lightwave", url: "https://tlmintl.com/brand/lightwave/" },
     { name: "Ubiquiti", url: "https://tlmintl.com/brand/ubiquiti/" },
@@ -68,54 +66,64 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="flex flex-col items-start justify-center w-full gap-20 p-20 text-center text-gray-400 bg-gray-900 lg:flex-row lg:text-start">
-      <div className='flex-col w-2/4'>
-      {/* Brands Section */}
-      <div className="mb-8">
-        <h4 className="mb-4 text-3xl text-white">Brands</h4>
-        <div className="flex gap-4 ggrid-cols-1 lg:grid sm:grid-cols-2 md:grid-cols-3">
-          {brands.map((brand, index) => (
-            <a key={index} href={brand.url} className="hover:text-gray-400">
-              {brand.name}
-            </a>
-          ))}
+    <footer className="flex flex-col items-start justify-center w-full p-20 text-center bg-black lg:gap-20 text-neutral-400 lg:flex-row lg:text-start">
+      <div className="flex flex-col w-auto lg:w-2/4">
+        {/* Brands Section */}
+        <div className="mb-8">
+          <h4 className="mb-4 text-xl font-semibold text-white lg:text-left lg:text-2xl">Brands</h4>
+          <div className="flex flex-wrap justify-center gap-4 lg:grid lg:grid-cols-3 sm:grid-cols-2">
+            {brands.map((brand, index) => (
+              <a
+                key={index}
+                href={brand.url}
+                className="text-lg font-thin text-center hover:text-neutral-400 lg:text-left"
+              >
+                {brand.name}
+              </a>
+            ))}
+          </div>
+        </div>
+
+
+
+        {/* Company Links Section */}
+        <div className="mb-8 lg:w-1/4">
+          <h4 className="mb-4 text-xl font-semibold text-white lg:text-2xl">Company</h4>
+          <div className="flex flex-wrap gap-5 lg:w-[400px] lg:gap-10">
+            {companyLinks.map((link, index) => (
+              <a key={index} href={link.url} className="text-lg font-thin hover:text-neutral-400">
+                {link.name}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Company Links Section */}
-      <div className="w-1/4 mb-8">
-        <h4 className="mb-4 text-3xl text-white">Company</h4>
-        <div className="flex space-x-10">
-          {companyLinks.map((link, index) => (
-            <a key={index} href={link.url} className=" hover:text-gray-400">
-              {link.name}
-            </a>
-          ))}
-        </div>
-      </div>
-      </div>
       {/* Social Media Section */}
-<div className="w-1/4 mb-8">
-  <h4 className="mb-4 text-3xl text-white">Social Media</h4>
-  <div className="flex flex-col space-y-4">
-    {socialMediaLinks.map((link, index) => (
-      <a key={index} href={link.url} className="flex items-center space-x-2 hover:text-gray-400">
-        {link.icon}
-        <span>{link.name}</span>
-      </a>
-    ))}
-  </div>
-</div>
-
+      <div className="w-full mb-8 lg:w-1/4">
+        <h4 className="mb-4 text-xl font-semibold text-white lg:text-2xl">Social Media</h4>
+        <div className="flex flex-row items-center lg:items-start lg:flex-col lg:space-y-4">
+          {socialMediaLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              className="flex items-center ml-2 space-x-2 hover:text-gray-400"
+            >
+              {link.icon}
+              <span className="text-lg font-thin ">{link.name}</span>
+            </a>
+          ))}
+        </div>
+      </div>
 
       {/* Contact Details Section */}
       <div>
-        <h4 className="mb-4 text-3xl text-white">Head Office</h4>
+        <h4 className="mb-4 text-xl font-semibold text-white lg:text-2xl">Head Office</h4>
         <ul className="space-y-4">
           {contactDetails.map((contact, index) => (
             <li key={index} className="flex items-center space-x-4">
-              <span>{contact.icon}</span>
-              <a href={contact.url} className="hover:text-gray-400">
+              <span className="text-2xl">{contact.icon}</span>
+              <a href={contact.url} className="text-lg font-thin hover:text-neutral-400">
                 {contact.details}
               </a>
             </li>

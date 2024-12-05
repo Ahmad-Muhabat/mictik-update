@@ -1,17 +1,66 @@
+import { useState } from "react";
+import Form from "./Form";
+
 export default function ProductInfo({ title, description, image }) {
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
-    <div className="container flex items-center justify-center w-auto gap-5 px-20 py-2 bg-gray-100">
+    <div className="container w-full px-10 mx-auto bg-neutral-100 md:px-20 lg:px-28">
+      {/* Main Wrapper */}
+      <div className="flex flex-col items-center justify-between gap-10 md:flex-row md:py-10">
+        
 
-      <div>
-        <img src={image} alt="images" />
+        {/* Image Section */}
+        <div className="flex justify-center order-2 md:order-1 lg:w-1/2">
+          <img
+            src={image}
+            alt="Product"
+            className="object-contain w-full h-auto max-w-xs md:max-w-md lg:max-w-lg"
+          />
+        </div>
+        
+        {/* Text Section */}
+        <div className="order-1 text-center md:order-2 md:text-left lg:w-1/2">
+          <h1 className="my-5 text-xl font-extrabold text-black lg:text-3xl text-start">
+            {title}
+          </h1>
+          <p className="mb-5 font-thin text-justify text-gray-500 text-md lg:text-lg">
+            {description}
+          </p>
+          <button
+            onClick={handleClick}
+            className="px-10 py-3 font-semibold text-black transition border border-black rounded-full hover:bg-black hover:text-white lg:py-4 lg:px-12"
+          >
+            Quick Enquiry
+          </button>
+        </div>
       </div>
-
-      <div className="w-3/4">
-        <h1 className="mb-5 text-3xl font-bold ">{title}</h1>
-        <p className="mb-5">{description}</p>
-        <button className="px-5 py-2 font-semibold text-black border-black rounded-full">Quick Enquiry</button>
-      </div>
+      
+      {/* Overlay for Form */}
+      {open && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
+          
+          <div className="relative bg-white p-5 w-[100%] max-w-2xl">
+            <button
+              className="absolute text-xl font-bold text-black top-2 right-4"
+              onClick={handleClose}
+            >
+              ×
+            </button>
+            <h1 className="flex items-center justify-center my-8 text-lg font-thin text-gray-950">Request Enquiry</h1>
+            <Form />
+          </div>
+        </div>
+      )}
+      
     </div>
-    
-  )
+  );
 }
