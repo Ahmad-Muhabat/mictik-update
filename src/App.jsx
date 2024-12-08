@@ -20,7 +20,7 @@ export default function App() {
  
   
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto max-w-auto">
 
       <HeaderCard 
         logo={logoUrl}
@@ -46,7 +46,10 @@ export default function App() {
           description="Lightwave excels by delivering high-performance fiber optic solutions, designed to enhance data transmission and ensure reliable, high-speed connectivity for modern networks."
       />
       
-      <div className="mb-8 text-3xl font-bold text-center lg:text-6xl">FAQs</div>
+      <div className="flex items-center justify-center w-full mb-8 text-3xl font-bold text-center mt-28 lg:text-6xl sm:mt-5 lg:w-screen">
+        FAQs
+      </div>
+
       <Accordion />
       
       <RegesterInfo image={logoUrl} 
@@ -56,7 +59,7 @@ export default function App() {
       <Footer/>
       <Link/>
       <a
-          className="relative"
+          className="relative hidden lg:block"
           data-action="open"
           data-phone="971581023459"
           data-message="Hi, I'm looking for more information on Lightwave: Leading Tech Solutions Across UAE & Middle East https://tlmintl.com/brand/lightwave"

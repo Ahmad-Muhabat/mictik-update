@@ -13,7 +13,7 @@ export default function ProductInfo1({ title, description, image }) {
   };
 
   return (
-    <div className="container w-full px-10 mx-auto md:px-20 lg:px-28">
+    <div className="w-full px-12 bg-white sm:px-14 md:px-20 lg:px-28 lg:w-screen">
       {/* Main Wrapper */}
       <div className="flex flex-col items-center justify-between gap-10 md:flex-row md:py-10">
         {/* Text Section */}
@@ -45,15 +45,16 @@ export default function ProductInfo1({ title, description, image }) {
       {/* Overlay for Form */}
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
-          
-          <div className="relative bg-white p-5 w-[100%] max-w-2xl">
+          <div className="relative bg-white p-5 w-[90%] max-w-2xl">
             <button
               className="absolute text-xl font-bold text-black top-2 right-4"
               onClick={handleClose}
             >
               ×
             </button>
-            <h1 className="flex items-center justify-center my-8 text-lg font-thin text-gray-950">Request Enquiry</h1>
+            <h1 className="flex items-center justify-center my-8 text-lg font-thin text-gray-950">
+              Request Enquiry
+            </h1>
             <Form />
           </div>
         </div>

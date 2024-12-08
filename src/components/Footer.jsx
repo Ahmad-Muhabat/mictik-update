@@ -66,7 +66,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="flex flex-col items-start justify-center w-full p-20 text-center bg-black lg:gap-20 text-neutral-400 lg:flex-row lg:text-start">
+    <footer className="flex flex-col items-start justify-center w-full p-20 text-center bg-black lg:gap-20 text-neutral-400 lg:flex-row lg:text-start lg:w-screen">
       <div className="flex flex-col w-auto lg:w-2/4">
         {/* Brands Section */}
         <div className="mb-8">

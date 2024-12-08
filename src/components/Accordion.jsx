@@ -58,7 +58,7 @@ export default function Accordion() {
 
       return (
         <div
-          className="px-4 py-3 w-[500px] lg:px-24 lg:py-0 lg:text-lg lg:w-[750px]"
+          className="w-full px-4 py-3 sm:px-6 lg:px-8"
           key={item.id}
         >
           <div
@@ -75,7 +75,7 @@ export default function Accordion() {
             )}
           </div>
           {isExpanded && (
-            <div className="mb-5 ml-2 font-thin text-gray-600">
+            <div className="mt-2 ml-2 text-sm font-thin text-gray-600">
               {item.content}
             </div>
           )}
@@ -89,7 +89,7 @@ export default function Accordion() {
   const column2Items = items.slice(midIndex);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2">
+    <div className="grid w-full grid-cols-1 gap-4 px-4 sm:px-6 md:grid-cols-2 lg:w-screen">
       <div>{renderColumn(column1Items, 0)}</div>
       <div>{renderColumn(column2Items, 1)}</div>
     </div>

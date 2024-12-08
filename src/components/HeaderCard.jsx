@@ -1,7 +1,7 @@
 export default function HeaderCard({ logo, name, nameInfo, portrait }) {
   return (
     <div
-      className="flex flex-col items-center p-8 bg-black lg:flex-row lg:p-28"
+      className="flex flex-col items-center w-full p-8 bg-black lg:flex-row lg:p-28 lg:w-screen"
       style={{
         backgroundColor: "#FFFFFF",
         backgroundImage: "url('https://tlmintl.com/wp-content/uploads/2024/02/light-new.jpg')",

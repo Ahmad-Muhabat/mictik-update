@@ -13,11 +13,9 @@ export default function ProductInfo({ title, description, image }) {
   };
 
   return (
-    <div className="container w-full px-10 mx-auto bg-neutral-100 md:px-20 lg:px-28">
+    <div className="w-full px-12 bg-neutral-100 sm:px-14 md:px-20 lg:px-28 lg:w-screen">
       {/* Main Wrapper */}
       <div className="flex flex-col items-center justify-between gap-10 md:flex-row md:py-10">
-        
-
         {/* Image Section */}
         <div className="flex justify-center order-2 md:order-1 lg:w-1/2">
           <img
@@ -26,7 +24,7 @@ export default function ProductInfo({ title, description, image }) {
             className="object-contain w-full h-auto max-w-xs md:max-w-md lg:max-w-lg"
           />
         </div>
-        
+
         {/* Text Section */}
         <div className="order-1 text-center md:order-2 md:text-left lg:w-1/2">
           <h1 className="my-5 text-xl font-extrabold text-black lg:text-3xl text-start">
@@ -43,24 +41,24 @@ export default function ProductInfo({ title, description, image }) {
           </button>
         </div>
       </div>
-      
+
       {/* Overlay for Form */}
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
-          
-          <div className="relative bg-white p-5 w-[100%] max-w-2xl">
+          <div className="relative bg-white p-5 w-[90%] max-w-2xl">
             <button
               className="absolute text-xl font-bold text-black top-2 right-4"
               onClick={handleClose}
             >
               ×
             </button>
-            <h1 className="flex items-center justify-center my-8 text-lg font-thin text-gray-950">Request Enquiry</h1>
+            <h1 className="flex items-center justify-center my-8 text-lg font-thin text-gray-950">
+              Request Enquiry
+            </h1>
             <Form />
           </div>
         </div>
       )}
-      
     </div>
   );
 }
